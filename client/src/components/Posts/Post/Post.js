@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
 import Axios from 'axios';
 import 'bulma/css/bulma.min.css';
 import './post.css';
@@ -61,12 +60,12 @@ export const Post = ({ pK, TeaType, TypeName, TeaName, TeaImage, purchaseSite, D
 
                     <div class="content">
                         <p>{Description}</p> 
-                        <a href={purchaseSite}>Link</a>.
+                        <a href={"//" + purchaseSite}>Link</a>.
                     </div>
                 </div>
                 <footer class="card-footer">
                     <a href="#" class="card-footer-item" onClick={() => setActiveKey(pK)}>Edit</a>
-                    <a href={pK} class="card-footer-item" onClick={() => deletePost()}>Delete</a>
+                    <a href="/" class="card-footer-item" onClick={() => deletePost()}>Delete</a>
                 </footer>
             </div>
     );

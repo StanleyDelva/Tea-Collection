@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Axios from 'axios';
 
 
@@ -146,7 +146,7 @@ export const PostForm = ({ isLoading, setIsLoading, activeKey, setActiveKey, tem
 
                     <div class="field">
                         <p class="control has-icons-left has-icons-right">
-                            <input class="input is-link" type="text" value={postData.purchaseSite} onChange={(e) => setPostData({ ...postData, purchaseSite: e.target.value})} placeholder="Link to site of purchase"/>
+                            <input class="input is-link" type="text" value={postData.purchaseSite} onChange={(e) => setPostData({ ...postData, purchaseSite: e.target.value})} placeholder="Link to site of purchase(www.xyz.com)"/>
                             <span class="icon is-small is-left">
                                 <i class="fas fa-link"></i>
                             </span>

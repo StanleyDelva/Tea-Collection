@@ -26,7 +26,7 @@ export const addPost = async (req, res) => {
             .input('TeaImage', sql.VarChar, post.TeaImage)
             .input('purchaseSite', sql.NVarChar, post.purchaseSite)
             .input('Description', sql.NVarChar, post.Description)
-            .execute('InsertPost').then(res => res.status(200).json({ message: 'Post created' }));
+            .execute('InsertPost').then(res.status(200).json({ message: 'Post created' }));
     }
     catch (error) {
         res.status(404).json({ message: error.message });
